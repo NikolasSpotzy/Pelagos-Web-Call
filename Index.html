@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelagos Restaurant - AI Voice Assistant Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1034A6 0%, #0F2B5B 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #1034A6;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .main-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .demo-box {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .demo-title {
+            font-size: 1.3rem;
+            color: #1034A6;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .demo-examples {
+            text-align: left;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .demo-examples li {
+            margin-bottom: 8px;
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .demo-examples li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #1034A6;
+            font-weight: bold;
+        }
+
+        .footer-note {
+            color: #888;
+            font-size: 0.95rem;
+            margin-top: 20px;
+        }
+
+        /* Fix for widget modal positioning */
+        .autocalls-widget-modal {
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+        }
+
+        /* Ensure widget is not clipped */
+        body {
+            overflow: visible !important;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 25px;
+                margin: 10px;
+            }
+            
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .main-text {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Pelagos</div>
+        <div class="subtitle">Mediterranean Restaurant • Limassol</div>
+        
+        <div class="main-text">
+            Try our AI voice assistant for restaurant reservations. 
+            Have a natural conversation with Maria about availability, bookings, and restaurant information.
+        </div>
+
+        <div class="demo-box">
+            <div class="demo-title">Try saying:</div>
+            <ul class="demo-examples">
+                <li>"Do you have a table available tomorrow at 8 PM?"</li>
+                <li>"I'd like to make a reservation for 4 people"</li>
+                <li>"What are your operating hours?"</li>
+                <li>"Tell me about your wine list"</li>
+            </ul>
+        </div>
+
+        <div class="footer-note">
+            Look for the voice assistant widget in the bottom-right corner to start testing
+        </div>
+    </div>
+
+    <!-- Autocalls Web Widget -->
+    <script src="https://app.autocalls.ai/embed.js" 
+            data-assistant-id="ecc9d0ee-481b-403e-aa49-7b7bf20e0954" 
+            data-position="right-bottom" 
+            data-color="#1034A6" 
+            data-header-title="Demo Restaurant" 
+            data-header-subtitle="Virtual restaurant just for testing ✨" 
+            data-button-main-text="Wanna Test Demo?" 
+            data-button-sub-text="Start voice call 📞" 
+            data-start-button-text="Start Web Voice Call" 
+            data-modal-title="Ready to test?" 
+            data-modal-description="Click below to start your voice call experience">
+    </script>
+</body>
+</html>
